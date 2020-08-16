@@ -58,7 +58,7 @@
 								<li><a href="#city">都市传说</a></li>
 								<li><a href="#contact">联系</a></li>
 								<li><a href="#links">链接</a></li>
-								<li><a href="#elements">框架/元素测试</a></li>
+								<!--<li><a href="#elements">框架/元素测试</a></li>-->
 							</ul>
 						</nav>
 					</header>
@@ -202,9 +202,10 @@
 							<article id="city">
 								<h2 class="major">the Legends of City</h2>
 								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<section>
+								
 								<!-- 复读机 START -->
-								<h3 class="major">复读机</h3>
+								<h3 class="major">复读机 | <a href="javascript:;" onclick="foldContext('citystory-001');">折叠/展开内容</a></h3>
+								<section style="overflow: hidden; height: auto;" id="citystory-001">
 								用户名 <code>TRepeater1</code><br/>
 								在2020年春节后悄然上线。只要向它私聊信息，它就会把信息在公屏上说一遍。<br/>
 								首次登台，就受到都市各路玩家的欢迎
@@ -264,8 +265,8 @@
 								<!-- 复读机 END -->
 								<hr>
 								<!-- 实验记录13 START -->
-								<section>
-								<h3 class="major">实验记录13</h3>
+								<h3 class="major">实验记录13 | <a href="javascript:;" onclick="foldContext('citystory-002');">折叠/展开内容</a></h3>
+								<section style="overflow: hidden; height: auto;" id="citystory-002">
 								在<code>2020年2月</code>的尾声，咱在废墟中找到了一台破败的机器<br/>
 								好在的是，它的设计图还完整，材料也好收集，<br/>
 								只不过…它的力量很有可能不是咱可以掌控的<br/><br/>
@@ -296,8 +297,8 @@
 								<!-- 实验记录13 END -->
 								<hr>
 								<!-- 信件 START -->
-								<section>
-								<h3 class="major">信件</h3>
+								<h3 class="major">信件 | <a href="javascript:;" onclick="foldContext('citystory-003');">折叠/展开内容</a></h3>
+								<section style="overflow: hidden; height: auto;" id="citystory-003">
 								<center>写给都市人的最后一封信</center>
 								“亲爱”的都市玩家：<br/>
 								你们好，几个月过去了，我们又又又见面了，<br/>
@@ -742,6 +743,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					alert("请先选中视频");
 				}
 			}
+			function foldContext(id){
+				var box = document.getElementById(id);
+				$("#"+id).slideToggle("slow");
+			}
+			$("#citystory-001").slideToggle("");
+			$("#citystory-002").slideToggle("");
+			$("#citystory-003").slideToggle("");
 			</script>
 	</body>
 </html>
